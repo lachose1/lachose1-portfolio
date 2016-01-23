@@ -72,13 +72,18 @@ video#bgvid {
 }
 
 #title-page {
-  margin-top: 0.25em;
-  font-size: 4em;
+  margin-top: 0.3em;
+  font-size: 6em;
+}
+
+#subtitle-page {
+  margin-top: 0.3em;
+  font-size: 1.4em;
 }
 
 #navbar-left, #navbar-right {
   border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  /*border-bottom: 1px solid white;*/
 }
 
 #projects-list {
@@ -131,13 +136,19 @@ video#bgvid {
   padding-top: 10px;
 }
 
+.navbar .container {
+  margin-left: 1.2em;
+  margin-right: none;
+}
+
 .navbar-default {
-  height: 100px;
-  padding-top: 25px;
+  height: 125px;
+  /*padding-top: 25px;*/
   color: white;
   background: none;
   /*background: rgba(255, 255, 255, 0.2);*/
   border: none;
+  box-shadow: none;
 }
 
 .navbar-default .navbar-brand {
