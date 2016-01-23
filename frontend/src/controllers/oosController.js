@@ -6,6 +6,7 @@ var Backbone = require("backbone"),
     // Views
     NavbarView = require("../views/navbar"),
     HomeView = require("../views/home");
+    ContactView = require("../views/contact");
     // Models
 
     // Utils
@@ -53,7 +54,21 @@ var OOSController = Marionette.Controller.extend({
 
     showAboutPage: function() {
         OOS.mainContainer.show(new HomeView({
-            contentType: "about"
+            contentType: "home"
+        }));
+    },
+
+    showContactPage: function() {
+        // OOS.mainContainer.$el.addClass("fade-out-2s");
+        OOS.mainContainer.show(new ContactView({
+            
+        }));
+    },
+
+    showProjectsPage: function() {
+        // OOS.mainContainer.$el.addClass("fade-out-2s");
+        OOS.mainContainer.show(new HomeView({
+            contentType: "home"
         }));
     }
 });

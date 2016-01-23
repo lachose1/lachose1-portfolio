@@ -57,13 +57,41 @@ video#bgvid {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url("img/projects/ozone/ozone11.jpg") no-repeat;
+    /*background: url("img/projects/ozone/ozone11.jpg") no-repeat;*/
     background-size: cover; 
+}
+
+#contact-container input {
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0px;
+  box-shadow: none;
+  font-size: 2em;
+  height: 2em;
+  color: white;
+}
+
+#contact-container textarea {
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0px;
+  box-shadow: none;
+  font-size: 2em;
+  /*height: 2em;*/
+  color: white;
 }
 
 #logo-navbar {
     position: relative;
     top: -10px;
+}
+
+#main-container {
+  color: white;
 }
 
 #menu-items {
