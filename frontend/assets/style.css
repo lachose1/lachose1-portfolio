@@ -66,6 +66,19 @@ video#bgvid {
     top: -10px;
 }
 
+#menu-items {
+    position: relative;
+    float: left;
+    margin-top: -155px;
+    font-size: 3em;
+}
+
+#menu-items li {
+    display: block;
+    float: none;
+    margin-bottom: 0.3em;
+}
+
 #modal-container {
     width: 50%;
     margin: 0 auto;
