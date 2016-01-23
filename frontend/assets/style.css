@@ -27,7 +27,8 @@ body {
     /*background-color: #000000;*/
     font-family: Apercu, Arial;
     color: white;
-    background: url("img/projects/ozone/ozone11.jpg") no-repeat center center fixed; 
+    /*background: url("img/projects/ozone/ozone11.jpg") no-repeat center center fixed; */
+    background: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -43,6 +44,23 @@ body:before {
     opacity: 1;
 }
 
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url("img/projects/ozone/ozone11.jpg") no-repeat;
+    background-size: cover; 
+}
+
 #logo-navbar {
     position: relative;
     top: -10px;
@@ -51,6 +69,11 @@ body:before {
 #modal-container {
     width: 50%;
     margin: 0 auto;
+}
+
+#title-page {
+  margin-top: 0.25em;
+  font-size: 4em;
 }
 
 #navbar-left, #navbar-right {
