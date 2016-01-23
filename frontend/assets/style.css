@@ -85,6 +85,15 @@ video#bgvid {
   color: white;
 }
 
+#contact-container button {
+  background: none;
+  border-radius: 0px;
+  box-shadow: none;
+  font-size: 2em;
+  /*height: 2em;*/
+  color: white;
+}
+
 #logo-navbar {
     position: relative;
     top: -10px;

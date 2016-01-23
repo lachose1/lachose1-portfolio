@@ -3,7 +3,7 @@ var _ = require("underscore"),
     OOS = require("../outofsight"),
     //CategoriesView = require("./categories"),
     //ProductsView = require("./products"),
-    template = require("../../dist/templates").contactView;
+    template = require("../../dist/templates").contact;
 
 var ContactView = Marionette.LayoutView.extend({
     template: template,
@@ -14,10 +14,12 @@ var ContactView = Marionette.LayoutView.extend({
     },
 
     ui: {
+        sendButton: "#send-button"
         //btnCategory: ".btn-category"
     },
 
     events: {
+        "click @ui.sendButton": "handleSendClick"
         //"click @ui.btnCategory": "handleCategoryClick"
     },
 
@@ -32,6 +34,11 @@ var ContactView = Marionette.LayoutView.extend({
 
     onShow: function() {
         //console.log(this.collection);
+    },
+
+    handleSendClick: function(event) {
+        event.preventDefault();
+        alert("Execute Send Script");
     }
 });
 
