@@ -101,6 +101,8 @@ video#bgvid {
 
 #main-container {
   color: white;
+  font-size: 1.15em;
+  text-align: justify;
 }
 
 #menu-items {
