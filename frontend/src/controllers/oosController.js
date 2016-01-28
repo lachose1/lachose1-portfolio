@@ -2,14 +2,14 @@ var Backbone = require("backbone"),
     Marionette = require("backbone.marionette"),
     OOS = require("../outofsight.js"),
     // Collections
-
+    ProjectsCollection = require("../collections/projects"),
     // Views
     NavbarView = require("../views/navbar"),
     HomeView = require("../views/home"),
     ProjectsView = require("../views/projects"),
-    ContactView = require("../views/contact");
+    ContactView = require("../views/contact"),
     // Models
-
+    ProjectModel = require("../models/project");
     // Utils
     
 
@@ -67,10 +67,20 @@ var OOSController = Marionette.Controller.extend({
     },
 
     showProjectsPage: function() {
+        this.projects = new ProjectsCollection([], {});
         // OOS.mainContainer.$el.addClass("fade-out-2s");
         OOS.mainContainer.show(new ProjectsView({
-            contentType: "home"
+            collection: this.projects
+            // contentType: "home"
         }));
+
+        this.projects.fetch({
+            success: function(collection) { // the fetched collection!
+                // if (collection.length == 4) {
+                //     POSMenu.vent.trigger("category:MaxReached");
+                // }
+            }
+        });
     }
 });
 
