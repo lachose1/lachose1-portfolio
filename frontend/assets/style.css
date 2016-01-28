@@ -101,7 +101,6 @@ video#bgvid {
 
 #main-container {
   color: white;
-  font-size: 1.15em;
   text-align: justify;
 }
 
@@ -138,33 +137,15 @@ video#bgvid {
   /*border-bottom: 1px solid white;*/
 }
 
-#projects-list {
-    position: relative;
-    top: 37px;
-    left: -130px;
-    transition: opacity 1s;
-    -moz-transition: opacity 1s; /* Firefox */
-    -webkit-transition: opacity 1s; /* Safari and Chrome */
-    -o-transition: opacity 1s; /* Opera */
-    opacity: 0;
+#projects-table {
+  text-align: right;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-#projects-list ul {
-  list-style-type: none;
-  text-align: center;
-}
-
-#projects-list ul li {
-  display: inline-block;
-}
-
-#projects-list ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-#projects-list ul li a:hover {
-  color: rgba(255, 255, 255, 0.3);
+#projects-table td:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 5px 1px 6px rgba(0, 200, 255, 0.4);
 }
 
 /* centered columns styles */
@@ -219,4 +200,18 @@ video#bgvid {
 
 .navbar-default .navbar-nav>li>a:visited {
   color: white;
+}
+
+@media (min-width: 900px) {
+  #main-container {
+    margin-top: -50px;
+    font-size: 0.85em;
+  }
+}
+
+@media (min-width: 1300px) {
+  #main-container {
+    margin-top: 0;
+    font-size: 1.15em;
+  }
 }

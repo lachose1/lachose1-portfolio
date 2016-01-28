@@ -3,9 +3,9 @@ var _ = require("underscore"),
     OOS = require("../outofsight"),
     //CategoriesView = require("./categories"),
     //ProductsView = require("./products"),
-    template = require("../../dist/templates").rightContentView;
+    template = require("../../dist/templates").projectsList;
 
-var RightContentView = Marionette.LayoutView.extend({
+var ProjectsList = Marionette.LayoutView.extend({
     template: template,
 
     regions: {
@@ -18,7 +18,7 @@ var RightContentView = Marionette.LayoutView.extend({
     },
 
     events: {
-        //"click @ui.btnCategory": "handleCategoryClick"
+        "click td": "handleProjectClick"
     },
 
     initialize: function(options) {
@@ -32,7 +32,11 @@ var RightContentView = Marionette.LayoutView.extend({
 
     onShow: function() {
         //console.log(this.collection);
+    },
+
+    handleProjectClick: function(event) {
+        console.log(event);
     }
 });
 
-module.exports = RightContentView;
+module.exports = ProjectsList;

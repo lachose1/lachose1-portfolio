@@ -2,15 +2,16 @@ var _ = require("underscore"),
     Marionette = require("backbone.marionette"),
     OOS = require("../outofsight"),
     HomeContentView = require("./homeContentView"),
-    template = require("../../dist/templates").home;
+    ProjectsList = require("./projectsList"),
+    template = require("../../dist/templates").projects;
 
-var HomeView = Marionette.LayoutView.extend({
+var ProjectsView = Marionette.LayoutView.extend({
     template: template,
-
+// 
     regions: {
         // mainContainer: "#main-container"
-        // sidebar: "#left-sidebar",
-        // rightContainer: "#right-content"
+        sidebar: "#left-sidebar",
+        rightContainer: "#right-content"
     },
 
     ui: {
@@ -25,22 +26,22 @@ var HomeView = Marionette.LayoutView.extend({
         this.contentType = options.contentType;
 
         // this.mainView = new HomeContentView();
-        // switch(this.contentType){
-        //     case "home":
-        //         // this.rightContent = new RightContentView();
-        //         break;
-        //     case "about":
-        //         break;
-        //     default:
-        //         this.rightContent = new RightContentView();
-        // }
+        switch(this.contentType){
+            case "home":
+                this.rightContent = new ProjectsList();
+                break;
+            case "about":
+                break;
+            default:
+                this.rightContent = new ProjectsList();
+        }
     },
 
     onRender: function() {
         // this.sidebar.show(this.mainView);
-        // this.rightContainer.show(this.rightContent);
+        this.rightContainer.show(this.rightContent);
         // this.famocoPreview.show(new FamocoPreviewView({collection: this.collection, pageType: this.pageType}));
     }
 });
 
-module.exports = HomeView;
+module.exports = ProjectsView;
