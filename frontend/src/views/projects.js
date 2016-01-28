@@ -53,7 +53,7 @@ var ProjectsView = Marionette.CompositeView.extend({
         // console.log(model);
         var html = "<div class='fade-in-2s'>";
         html += "<h2>" + model.get("project_name") + "</h2>";
-        html += "<h5>" + model.get("text_date") + "</h5>";
+        html += "<h5>" + model.get("technologies") + " - " + model.get("text_date") + "</h5>";
         html += "<p>" + model.get("description") + "</p>";
         html += "</div>";
         $("#left-sidebar").html(html);
