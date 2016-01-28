@@ -9,7 +9,7 @@ var _ = require("underscore"),
 var ProjectView = Marionette.ItemView.extend({
     template: template,
     //tagName: "a",
-    //className: "list-group-item btn-category",
+    className: "btn-project",
 
     ui: {
         // buttonCategory: ".btn-category",
@@ -18,7 +18,7 @@ var ProjectView = Marionette.ItemView.extend({
     },
 
     events: {
-        // "click @ui.buttonCategory": "handleCategoryClick",
+        "click": "handleProjectClick",
         // "click @ui.buttonDelCategory": "handleDelCategoryClick",
         // "click @ui.buttonOpenProducts": "handleOpenProductsClick"
     },
@@ -34,7 +34,9 @@ var ProjectView = Marionette.ItemView.extend({
         // window.clearInterval(this.intervalId);
     },
 
-    handleCategoryClick: function() {
+    handleProjectClick: function() {
+        OOS.vent.trigger("project:Clicked", this.model);
+        // alert(this.model.id);
         // POSMenu.vent.trigger("category:Clicked", this.model);
     },
 

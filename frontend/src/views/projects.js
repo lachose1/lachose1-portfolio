@@ -14,7 +14,7 @@ var ProjectsView = Marionette.CompositeView.extend({
 // 
     regions: {
         // mainContainer: "#main-container"
-        // sidebar: "#left-sidebar",
+        //sidebar: "#left-sidebar",
         // rightContainer: "#right-content"
     },
 
@@ -27,6 +27,8 @@ var ProjectsView = Marionette.CompositeView.extend({
     },
 
     initialize: function(options) {
+        this.listenTo(OOS.vent, "project:Clicked",
+                      this.handleProjectClicked);
         // this.contentType = options.contentType;
 
         // this.mainView = new HomeContentView();
@@ -45,6 +47,16 @@ var ProjectsView = Marionette.CompositeView.extend({
         // this.sidebar.show(this.mainView);
         // this.rightContainer.show(this.rightContent);
         // this.famocoPreview.show(new FamocoPreviewView({collection: this.collection, pageType: this.pageType}));
+    },
+
+    handleProjectClicked: function(model) {
+        // console.log(model);
+        var html = "<div class='fade-in-2s'>";
+        html += "<h2>" + model.get("project_name") + "</h2>";
+        html += "<h5>" + model.get("text_date") + "</h5>";
+        html += "<p>" + model.get("description") + "</p>";
+        html += "</div>";
+        $("#left-sidebar").html(html);
     }
 });
 
