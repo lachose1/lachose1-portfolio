@@ -51,37 +51,20 @@ var ProjectsView = Marionette.CompositeView.extend({
 
     handleProjectClicked: function(model) {
         // console.log(model);
-        var html = "<div class='fade-in-2s'>";
+        var html = "<div class='fade-in-2s' id='project-container'>";
         html += "<h2>" + model.get("project_name") + "</h2>";
         html += "<h5>" + model.get("technologies") + " - " + model.get("text_date") + "</h5>";
-        html += "<div class='free-wall'>";
-        html += "<div class='brick'><p>" + model.get("description") + "</p></div>";
-        html += "<div class='brick size320'><img class='size320' src='http://localhost:4000/assets/img/projects/ozone/ozone3.jpg' alt='image'/></div>";
-        html += "<div class='brick size320'><img class='size320' src='http://localhost:4000/assets/img/projects/ozone/ozone3.jpg' alt='image'/></div>";
-        html += "<div class='brick size320'><img class='size320' src='http://localhost:4000/assets/img/projects/ozone/ozone3.jpg' alt='image'/></div>";
-        html += "<div class='brick size320'><img class='size320' src='http://localhost:4000/assets/img/projects/ozone/ozone3.jpg' alt='image'/></div>";
-        html += "<div class='brick size320'><img class='size320' src='http://localhost:4000/assets/img/projects/ozone/ozone3.jpg' alt='image'/></div>";
-        html += "<div class='brick size320'><img class='size320' src='http://localhost:4000/assets/img/projects/ozone/ozone3.jpg' alt='image'/></div>";
-        html += "</div>";
+        html += "<p>" + model.get("description") + "</p>";
         html += "</div>";
         $("#left-sidebar").html(html);
-        $(".free-wall").each(function() {
-            var wall = new freewall(this);
-            wall.reset({
-                animate: true,
-                flex: true,
-                gutterX: 10,
-                gutterY: 10,
-                cellW: 320,
-                cellH: 200,
-                // gutter: mixed,
-                onResize: function() {
-                    wall.fitWidth();
-                }
-            })
-            wall.fitWidth();
-        });
-        $(window).trigger("resize");
+        var width = document.getElementById("project-container").offsetWidth;
+        var imgWidth = width / model.get("no_images");
+        var imgHtml = "";
+
+        for (i = 1; i <= model.get("no_images"); i++) { 
+            imgHtml += "<img width='" + imgWidth + "px' src='" + model.get("image_url") + "image" + i + model.get("image_extension") + "' alt='image'/>";
+        }
+        $("#project-container").append(imgHtml);
     }
 });
 
