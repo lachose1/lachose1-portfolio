@@ -147,9 +147,17 @@ video#bgvid {
     margin: 0 auto;
 }
 
+#right-content {
+  box-shadow: none;
+}
+
 #title-page {
   margin-top: 0.3em;
   font-size: 6em;
+}
+
+.size320 {
+  width: 320px;
 }
 
 #subtitle-page {
