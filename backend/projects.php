@@ -38,7 +38,9 @@ function getProject($id) {
 							text_date,
 							description,
 							image_url,
-							video_url
+							video_url,
+							no_images,
+							image_extension
 						FROM
 							projects
 						WHERE
@@ -65,7 +67,9 @@ function getProjects() {
 							text_date,
 							description,
 							image_url,
-							video_url
+							video_url,
+							no_images,
+							image_extension
 						FROM
 							projects
 						ORDER BY
