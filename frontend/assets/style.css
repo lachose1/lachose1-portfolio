@@ -156,6 +156,19 @@ video#bgvid {
   font-size: 6em;
 }
 
+#service-header {
+  text-align: center;
+}
+
+#services-table td {
+  padding: 7px;
+}
+
+.service-title {
+  font-size: 1.2em;
+  text-align: center;
+}
+
 .size320 {
   width: 320px;
 }
@@ -231,7 +244,7 @@ video#bgvid {
 @media (min-width: 900px) {
   #main-container {
     margin-top: -50px;
-    font-size: 0.85em;
+    font-size: 1.00em;
   }
 }
 
