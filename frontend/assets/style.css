@@ -224,6 +224,10 @@ video#bgvid {
   color: white;
 }
 
+#left-sidebar {
+  left: 130px;
+}
+
 @media (min-width: 900px) {
   #main-container {
     margin-top: -50px;
@@ -232,6 +236,9 @@ video#bgvid {
 }
 
 @media (min-width: 1300px) {
+  #left-sidebar {
+    left: 0;
+  }
   #main-container {
     margin-top: 0;
     font-size: 1.15em;
