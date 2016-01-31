@@ -150,6 +150,14 @@ video#bgvid {
     margin-bottom: 0.3em;
 }
 
+#message-sent {
+  text-align: center;
+}
+
+#message-sent span {
+  font-size: 10em;
+}
+
 #modal-container {
     width: 50%;
     margin: 0 auto;
