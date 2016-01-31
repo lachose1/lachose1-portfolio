@@ -102,6 +102,10 @@ video#bgvid {
   color: white;
 }
 
+.contact-cell {
+  padding: 5px 5px 0px 0px;
+}
+
 #contact-container textarea {
   background: none;
   border-top: none;
