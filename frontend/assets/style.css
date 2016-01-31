@@ -15,6 +15,10 @@
   src: url("../fonts/Apercu/apercu_medium_italic.otf") format("opentype");
 }
 
+a, a:active, a:visited, a:link, a:hover {
+  color: white;
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -245,6 +249,9 @@ video#bgvid {
   #main-container {
     margin-top: -50px;
     font-size: 1.00em;
+  }
+  #contact-container {
+    margin-top: -50px;
   }
 }
 
